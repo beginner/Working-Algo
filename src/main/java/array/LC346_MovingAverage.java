@@ -1,7 +1,7 @@
 package array;
 
 // Time -> O(1)
-// Space -> O(N)
+// Space -> O(N)gt
 public class LC346_MovingAverage {
 
     int total = 0;
