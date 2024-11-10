@@ -12,8 +12,10 @@ public class LC269_AlienDictionary {
 
     // Input: words = ["wrt","wrf","er","ett","rftt"]
     // Output: "wertf"
+    // Model as a graph problem - Topological sort
     public String alienOrder(String[] words) {
-
+        // Create a adjacency list from source -> List<destination> ( destination is lexicographically smaller)
+        // Do a topological sort using indegree
         HashMap<Character, List<Character>> adj = new HashMap<>();
 
         HashMap<Character, Integer> indegree = new HashMap<>();
