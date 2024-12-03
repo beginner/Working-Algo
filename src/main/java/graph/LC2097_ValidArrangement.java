@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+// Eulerian path
+// https://www.youtube.com/watch?v=8MpoO2zA2l4&t=415s
+
 public class LC2097_ValidArrangement {
 
     int[][] result;
@@ -12,6 +15,8 @@ public class LC2097_ValidArrangement {
         backtrack(pairs, new ArrayList<>(), new HashSet<>());
         return result;
     }
+
+
 
     private void backtrack(int[][] pairs, List<int[]> curr, Set<Integer> visited) {
         if (result != null) return;
