@@ -30,10 +30,9 @@ public class LC678_ValidParentheses {
             if (stars.pop() < parentheses.pop()) return false;
         }
         return true;
-
     }
 
-    public boolean checkValidString(String s) {
+    public boolean checkValidStringOptimized(String s) {
         int open = 0;
         int close = 0;
         for (int i = 0; i < s.length(); i++) {
