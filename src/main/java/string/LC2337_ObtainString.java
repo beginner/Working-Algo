@@ -1,6 +1,6 @@
 package string;
 
-public class LC2337 {
+public class LC2337_ObtainString {
 
     public boolean canChange(String start, String target) {
 
