@@ -15,8 +15,13 @@ public class TokenBucket {
         _lastRefillTimeNs = new AtomicLong(System.nanoTime());
     }
 
-    public boolean tryConsume(int tokens) {
-
+    public boolean tryConsume() {
+        refill();
+        if (_currentTokens.get() > 0) {
+            _currentTokens.decrementAndGet();
+            return true;
+        }
+        return false;
     }
 
     private void refill() {
